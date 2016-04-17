@@ -82,6 +82,9 @@ LOCAL_SHARED_LIBRARIES := \
         libbacktrace \
         liblog \
         libdl
+ifeq ($(BOARD_HAS_MTK_HARDWARE),true)  
+LOCAL_SRC_FILES += MediatekHacks.cpp  
+endif 
 
 LOCAL_MODULE := libutils
 LOCAL_CLANG := true
